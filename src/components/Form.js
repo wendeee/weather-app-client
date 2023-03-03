@@ -15,7 +15,7 @@ export default function Form() {
         let response = await fetch(
           `https://weather-api-qz5d.onrender.com/api/v1/city/${cityName}`
         );
-        if (!response.ok) throw new Error ('City not found! Enter a valid city name')
+        if (!response.ok) {console.log(response); throw new Error ('City not found! Enter a valid city name')}
         response = await response.text();
         const str = new window.DOMParser().parseFromString(response, "text/xml");
         const data = str.getElementsByTagName("description")[0].innerHTML;

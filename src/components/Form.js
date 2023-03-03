@@ -43,6 +43,7 @@ export default function Form() {
             setCity(event.target.value);
           }}
           onFocus={(event) => event.target.value = ''}
+          autoComplete="off"
           required
         ></input>
         <button type="submit">Find</button>

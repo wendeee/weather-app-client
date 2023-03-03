@@ -13,7 +13,7 @@ export default function Form() {
     const fetchData = async (cityName) => {
       try{
         let response = await fetch(
-          `https://weather-api.onrender.com/api/v1/city/${cityName}`
+          `https://weather-api-qz5d.onrender.com/api/v1/city/${cityName}`
         );
         if (!response.ok) throw new Error ('City not found! Enter a valid city name')
         response = await response.text();
